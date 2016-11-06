@@ -1,6 +1,6 @@
 body{
   font-family: 'Open Sans', arial, sans-serif;
-  background:rgb(123, 158, 158);
+  background:rgb(255, 255, 255);
 
 }
 *{
@@ -148,4 +148,8 @@ body{
 }
 #fork:hover:before {
   transform: translateX(0) skewX(-45deg);
+}
+
+.top {
+  padding-top: 30px;
 }
