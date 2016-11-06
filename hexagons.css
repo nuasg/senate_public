@@ -153,3 +153,13 @@ body{
 .top {
   padding-top: 30px;
 }
+
+.bottom {
+  padding: 30px;
+}
+
+.footer {
+  margin-bottom: 50px;
+  color: #AAAAAA;
+  text-align: center;
+}
