@@ -163,3 +163,7 @@ body{
   color: #AAAAAA;
   text-align: center;
 }
+
+.block {
+  display: block;
+}
