@@ -5,7 +5,7 @@
             $stateProvider
                 .state("home", {
                     url: "/",
-                    templateUrl: "senate_public/app/home/home.html",
+                    templateUrl: "/senate_public/app/home/home.html",
                     controller: "HomeController"
                 });
         })
