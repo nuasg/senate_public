@@ -1,6 +1,6 @@
 (function(){
     angular.module("senate")
-    .controller("HomeController",["$scope", "$state", "$http", function($scope, $state, $http){
+    .controller("TimelineController",["$scope", "$state", "$http", function($scope, $state, $http){
         // $http.get("/senate/api/whoami").success(function(user) {
         //     if (user.role === "Admin") {
         //         $state.go("admin");

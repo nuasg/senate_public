@@ -5,18 +5,12 @@
             $stateProvider
                 .state("home", {
                     url: "/",
-                    views: {
-                        "": {
-                            templateUrl: "senate_public/app/home/home.html",
-                            controller: "HomeController"
-                        },
-                        "titlePage@home": {
-                            templateUrl: "senate/app/senate/titlePage.html"
-                        },
-                        "timeline@home": {
-                            templateUrl: "senate/app/senate/timeline.html"
-                        }
-                    }
+                    templateUrl: "senate_public/app/home/home.html"
+                })
+                .state("timeline", {
+                    url: "/timeline",
+                    templateUrl: "senate_public/app/timeline.html",
+                    controller: "TimelineController"
                 });
         })
 }());
