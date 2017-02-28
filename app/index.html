@@ -1,15 +1,50 @@
+<!DOCTYPE html>
+<html>
 <head>
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
-<link href='hexagons.css' rel='stylesheet' type='text/css'>
+    <title>Philip Lan</title>
+    <link rel="stylesheet" type="text/css" href="css/bootswatch.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-main.js"></script>
 </head>
-
 <body>
-    <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#timeline"><h4>TIMELINE</h4></a></li>
+                <li><a><h4>SENATORS</h4></a></li>
+                <li><a><h4>DOCUMENTS</h4></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </div>
+    </nav>
+    <div class="titlePage">
+        <h1>ASG Senate</h1>
+        <div class="row">
+            <h3>
+                <a href="#timeline">TIMELINE</a> · 
+                <a>SENATORS</a> · 
+                <a>DOCUMENTS</a>
+            </h3>
+        </div>
+    </div>
+    <div class="container" id="timeline">
         <div class="header">
-            <h3 id="timeline-title">Timeline</h3>
+            <h2 id="timeline-title">Timeline</h2>
             <div class="row">
                 <div class="col-md-2 col-md-offset-10">
                     <select class="form-control">
@@ -26,7 +61,7 @@
                 <div class="col-md-2">
                     <h5>10/27/2016</h5>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="list-group">
                         <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">SVLP Nominee Questionnaire</h4>
@@ -43,7 +78,7 @@
                 <div class="col-md-2">
                     <h5>10/20/2016</h5>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="list-group">
                         <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">MHAC Legislation</h4>
@@ -59,3 +94,4 @@
         </div>
     </div>
 </body>
+</html>
