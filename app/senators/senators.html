@@ -18,10 +18,52 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">{{userInfo.senator.firstName}} {{userInfo.senator.lastName}}</h4>
       </div>
       <div class="modal-body">
-        ...
+        <div class="btn-group col-md-6 col-md-offset-3">
+          <a ng-click="state=true" ng-class="{disabled: state}" class="btn btn-default col-md-6">Voting Record</a>
+          <a ng-click="state=false" ng-class="{disabled: (state== 0)}"  class="btn btn-default col-md-6">Attendance</a>
+        </div>
+        <br/>
+        <div ng-if="state" class="row">
+          <table class="table table-striped table-hover" ng-if="userInfo.vote.length > 0">
+            <thead>
+              <tr>
+                <th>Legislation</th>
+                <th>Vote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="vote in userInfo.vote">
+                <td>{{vote.docName}}</td>
+                <td>{{vote.vote}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="col-md-12 nodocs" ng-if="userInfo.vote.length == 0">
+            No Voting Records Exist
+          </div>
+        </div>
+        <div ng-if="!state" class="row">
+          <table class="table table-striped table-hover" ng-if="userInfo.attendances.length > 0">
+            <thead>
+              <tr>
+                <th>Week Of</th>
+                <th>Present</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="session in userInfo.attendances">
+                <td>{{session.weekOf | date: 'shortDate'}} {{session.period}}</td>
+                <td>{{session.present}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="col-md-12 nodocs" ng-if="userInfo.attendances.length == 0">
+            No Attendance Records Exist
+          </div>
+        </div>
       </div>
     </div>
   </div>

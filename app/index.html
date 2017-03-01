@@ -22,9 +22,9 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a><h4>TIMELINE</h4></a></li>
-                <li><a><h4>SENATORS</h4></a></li>
-                <li><a><h4>DOCUMENTS</h4></a></li>
+                <li><a ui-sref="timeline"><h4>TIMELINE</h4></a></li>
+                <li><a ui-sref="senators"><h4>SENATORS</h4></a></li>
+                <li><a ui-sref="legislation"><h4>LEGISLATION</h4></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -36,7 +36,7 @@
             <h3>
                 <a ui-sref="timeline">TIMELINE</a> · 
                 <a ui-sref="senators">SENATORS</a> · 
-                <a>DOCUMENTS</a>
+                <a ui-sref="legislation">LEGISLATION</a>
             </h3>
         </div>
     </div>
@@ -51,4 +51,5 @@
 <script src="senate_public/app/app.js"></script>
 <script src="senate_public/app/timeline/timeline.controller.js"></script>
 <script src="senate_public/app/senators/senators.controller.js"></script>
+<script src="senate_public/app/legislation/legislation.controller.js"></script>
 </html>

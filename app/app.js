@@ -12,6 +12,11 @@
                     url: "/senators",
                     templateUrl: "senate_public/app/senators/senators.html",
                     controller: "SenatorsController"
-                });
+                })
+                .state("legislation", {
+                    url: "/legislation",
+                    templateUrl: "senate_public/app/legislation/legislation.html",
+                    controller: "LegislationController"
+                }); 
         })
 }());
