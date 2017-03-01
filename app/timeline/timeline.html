@@ -1,51 +1,35 @@
 <div class="container" id="timeline">
-    <div class="header">
-        <h2 id="timeline-title">Timeline</h2>
+    <div class="header"> 
+        <h2 id="timeline-title">{{dates.selected.name}}</h2>
         <div class="row">
-            <div class="col-md-2 col-md-offset-10">
-                <select class="form-control">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </div>
+          <div class="col-md-2 col-md-offset-10">
+              <select class="form-control"
+                ng-options="option.name for option in dates.data track by option.name"
+                ng-model="dates.selected"
+                ng-change="getDocs(dates.selected.start_date, dates.selected.end_date)">
+              </select>
+          </div>
         </div>
     </div>
     <div class="posts">
-        <div class="row">
+        <div class="row" ng-repeat="val in items | orderBy: 0 :true">
             <div class="col-md-2">
-                <h5>10/27/2016</h5>
+                <h5>{{val[0] | date:'shortDate'}}</h5>
             </div>
             <div class="col-md-9">
                 <div class="list-group">
-                    <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">SVLP Nominee Questionnaire</h4>
-                    <p class="list-group-item-text">DFall SLVP 2016 Ben Powell's application (confirmation documents)</p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Agenda</h4>
-                    <p class="list-group-item-text">Senate Agenda - November 2, 2016</p>
+                    <a href="{{post.link}}" 
+                      target="_blank" 
+                      class="list-group-item" 
+                      ng-repeat="post in val[1] | orderBy: 'ordering'">
+                    <h4 class="list-group-item-heading">{{post.title}}</h4>
+                    <p class="list-group-item-text">{{post.description}}</p>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2">
-                <h5>10/20/2016</h5>
-            </div>
-            <div class="col-md-9">
-                <div class="list-group">
-                    <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">MHAC Legislation</h4>
-                    <p class="list-group-item-text">Mental Health Ad Hoc Committee</p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">List group item heading</h4>
-                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </a>
-                </div>
-            </div>
+        <div ng-if="items.length == 0" class="nodocs">
+            <h3>No Documents Found</h3>
         </div>
     </div>
 </div>

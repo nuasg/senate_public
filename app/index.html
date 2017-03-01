@@ -22,7 +22,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#timeline"><h4>TIMELINE</h4></a></li>
+                <li><a><h4>TIMELINE</h4></a></li>
                 <li><a><h4>SENATORS</h4></a></li>
                 <li><a><h4>DOCUMENTS</h4></a></li>
             </ul>
@@ -30,6 +30,16 @@
         </div><!-- /.container-fluid -->
       </div>
     </nav>
+    <div class="titlePage">
+        <h1>ASG Senate</h1>
+        <div class="row">
+            <h3>
+                <a ui-sref="timeline">TIMELINE</a> · 
+                <a ui-sref="senators">SENATORS</a> · 
+                <a>DOCUMENTS</a>
+            </h3>
+        </div>
+    </div>
     <div ui-view class="main"></div>
 </body>
 <script src="senate/node_modules/jquery.min.js"></script>
@@ -40,4 +50,5 @@
 <script src="senate_public/app/js/jquery-main.js"></script>
 <script src="senate_public/app/app.js"></script>
 <script src="senate_public/app/timeline/timeline.controller.js"></script>
+<script src="senate_public/app/senators/senators.controller.js"></script>
 </html>

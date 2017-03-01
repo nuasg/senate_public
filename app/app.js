@@ -3,14 +3,15 @@
         .config(function($stateProvider, $urlRouterProvider){
             $urlRouterProvider.otherwise("/");
             $stateProvider
-                .state("home", {
-                    url: "/",
-                    templateUrl: "senate_public/app/home/home.html"
-                })
                 .state("timeline", {
-                    url: "/timeline",
-                    templateUrl: "senate_public/app/timeline.html",
+                    url: "/",
+                    templateUrl: "senate_public/app/timeline/timeline.html",
                     controller: "TimelineController"
+                })
+                .state("senators", {
+                    url: "/senators",
+                    templateUrl: "senate_public/app/senators/senators.html",
+                    controller: "SenatorsController"
                 });
         })
 }());

@@ -1,8 +1,3 @@
-body, html, .main {
-    height: 100%;
-    width: 100%;
-}
-
 .navbar .nav,
 .navbar .nav > li {
     float:none;
@@ -17,14 +12,10 @@ body, html, .main {
 .navbar li a:hover{
     text-decoration: underline;
 }
-
 .titlePage {
-    height: 100%;
-    width: 100%;
+    padding-top: 10px;
 }
-
 .titlePage h1 {
-    margin-top: 15%;
     text-align: center;
 }
 
@@ -67,18 +58,25 @@ body, html, .main {
     margin-top: 0px;
 }
 
+.nodocs {
+    text-align: center;
+}
+
 .senators .row .col-md-2 {
-    background: #b19cd9;
     border: 1px solid white;
-    padding: 6%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    height: 230px;
+    width: 230px;
     cursor: pointer;
+    padding-top: 80px;
 }
 
 .senators .row .col-md-2:hover {
-    border: 1px solid black;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.senators .row .col-md-2 h5{
-    color: white;
-    margin: 0px;
+.senators .row .col-md-2 h5 {
+    text-align: center;
+    vertical-align: middle;
 }
